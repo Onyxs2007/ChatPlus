@@ -1,0 +1,113 @@
+# ChatPlus Filters Configuration
+# Advanced filtering options with profanity detection and clickable actions
+
+# Enable/disable individual filters
+enabled: true
+
+# Duplicate message detection
+duplicate-check:
+  enabled: true
+  # Time window in seconds to check for duplicates
+  time-window: 60
+
+# Repeated character filter
+repeated-chars:
+  enabled: true
+  # Maximum number of repeated characters allowed
+  max-repeated: 3
+  # Characters to ignore (spaces, punctuation)
+  ignore-chars: [" ", ".", "!", "?", ","]
+
+# Caps filter
+caps-filter:
+  enabled: true
+  # Maximum ratio of caps to total letters (0.0 - 1.0)
+  max-ratio: 0.8
+  # Minimum message length to apply caps filter
+  min-length: 5
+  # Ignore short words (like "I", "OK")
+  ignore-short-words: true
+
+# Profanity/Blacklist Filter
+profanity-filter:
+  enabled: true
+  # Action to take when profanity is detected
+  # Options: "block" (prevent message), "replace" (replace with symbols), "warn" (log only)
+  action: "replace"
+  
+  # Replacement settings (only used when action is "replace")
+  replacement:
+    # Type of replacement: "asterisk", "hash", "dash", "custom", "partial"
+    type: "asterisk"
+    # Custom replacement string (used when type is "custom")
+    custom-string: "*"
+    # Preserve word length when replacing
+    preserve-length: true
+  
+  # Word detection settings
+  detection:
+    # Use word boundaries to prevent false positives
+    word-boundaries: true
+    # Case sensitive matching
+    case-sensitive: false
+    # Check against variations (leet speak, character substitution)
+    check-variations: false
+  
+  # Whitelist of words that should never be filtered (even if they contain blacklisted substrings)
+  whitelist:
+    - "grass"
+    - "assistant"
+    - "class"
+  
+  # Blacklist categories (words are defined in main config.yml)
+  categories:
+    # Enable different categories of filtering
+    general-profanity: true
+    spam-words: true
+    advertising: false
+    
+# Advanced filters (optional)
+advanced:
+  # Block messages with excessive punctuation
+  punctuation-limit:
+    enabled: false
+    max-consecutive: 3
+  
+  # Block messages with excessive numbers
+  number-limit:
+    enabled: false
+    max-consecutive: 5
+  
+  # Block messages with mixed case (like "hElLo")
+  mixed-case:
+    enabled: false
+    max-switches: 3
+  
+  # URL filtering
+  url-filter:
+    enabled: false
+    # Block all URLs
+    block-all: false
+    # Whitelist of allowed domains
+    allowed-domains:
+      - "youtube.com"
+      - "discord.gg"
+    # Replace URLs with placeholder text
+    replace-with: "[LINK REMOVED]"
+  
+  # IP address filtering
+  ip-filter:
+    enabled: false
+    # Block messages containing IP addresses
+    block-ips: true
+    # Replace IPs with placeholder
+    replace-with: "[IP REMOVED]"
+
+# Logging and monitoring
+logging:
+  # Log filtered messages for review
+  log-filtered: true
+  # Log replacement actions
+  log-replacements: false
+  # Include player names in logs
+  include-player-names: true

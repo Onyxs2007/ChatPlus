@@ -1,0 +1,60 @@
+# ChatPlus Messages Configuration
+# Every player-facing string with color codes and placeholders
+
+# Command messages
+no-permission: "&cYou don't have permission to use this command!"
+player-only: "&cThis command can only be used by players!"
+unknown-command: "&cUnknown subcommand: &7{command}"
+
+# Reload messages
+reload-success: "&aConfiguration reloaded successfully!"
+reload-error: "&cError reloading configuration: &7{error}"
+
+# Cooldown messages
+cooldown: "&cPlease wait &7{time}&c seconds before sending another message!"
+cooldown-soft: "&8Your message was throttled due to spam protection."
+
+# Duplicate message prevention
+duplicate: "&cPlease don't repeat the same message!"
+
+# Filter messages
+filtered: "&cYour message was blocked by the chat filter!"
+excessive-caps: "&cPlease don't use excessive capital letters!"
+excessive-repeat: "&cPlease don't repeat characters excessively!"
+profanity-blocked: "&cYour message contains inappropriate language!"
+
+# Chat toggle messages
+chat-toggle-enabled: "&aGlobal chat has been enabled!"
+chat-toggle-disabled: "&cGlobal chat has been disabled!"
+world-chat-enabled: "&aChat has been enabled in world &7{world}&a!"
+world-chat-disabled: "&cChat has been disabled in world &7{world}&c!"
+chat-muted: "&cChat is currently disabled. Commands can still be used."
+
+# Status messages
+status-cooldown-ready: "&aReady"
+status-cooldown-waiting: "&c{time}s remaining"
+status-emojis-active: "&aActive"
+status-emojis-inactive: "&cInactive"
+
+# Help messages
+help-header: "&6ChatPlus Commands:"
+help-reload: "&e/chatplus reload &7- Reload all YAML files"
+help-test: "&e/chatplus test &7- Show current rule resolution"
+help-status: "&e/chatplus status &7- Show your cooldown and emoji status"
+help-toggle: "&e/chatplus toggle chat &7- Toggle global chat on/off"
+help-toggle-world: "&e/chatplus toggle world <name> &7- Toggle chat for specific world"
+help-help: "&e/chatplus help &7- Show this help message"
+
+# Test command messages
+test-header: "&6Rule Resolution Test:"
+test-cooldown: "&7Cooldown: &f{cooldown}s"
+test-group: "&7Group: &f{group}"
+test-world: "&7World: &f{world}"
+test-emojis: "&7Emojis: &f{status}"
+test-bypass-cooldown: "&7Bypass Cooldown: &f{status}"
+test-bypass-duplicate: "&7Bypass Duplicate: &f{status}"
+
+# Integration messages
+integration-luckperms: "&aLuckPerms integration enabled!"
+integration-vault: "&aVault integration enabled!"
+integration-placeholderapi: "&aPlaceholderAPI integration enabled!"

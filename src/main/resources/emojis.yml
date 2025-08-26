@@ -1,0 +1,76 @@
+# ChatPlus Emoji Configuration
+# All emoji codes and replacement rules
+
+# Emoji mappings (code: replacement)
+mappings:
+  # Faces
+  ":smile:": "😊"
+  ":sad:": "😢"
+  ":angry:": "😠"
+  ":cool:": "😎"
+  ":wink:": "😉"
+  ":love:": "😍"
+  ":laugh:": "😂"
+  ":cry:": "😭"
+  ":kiss:": "😘"
+  ":surprised:": "😮"
+  
+  # Objects
+  ":heart:": "❤️"
+  ":star:": "⭐"
+  ":fire:": "🔥"
+  ":diamond:": "💎"
+  ":crown:": "👑"
+  ":skull:": "💀"
+  ":lightning:": "⚡"
+  ":sun:": "☀️"
+  ":moon:": "🌙"
+  ":flower:": "🌸"
+  
+  # Gestures
+  ":thumbsup:": "👍"
+  ":thumbsdown:": "👎"
+  ":peace:": "✌️"
+  ":ok:": "👌"
+  ":clap:": "👏"
+  ":wave:": "👋"
+  ":point:": "👉"
+  ":fist:": "✊"
+  
+  # Minecraft-specific
+  ":pickaxe:": "⛏️"
+  ":sword:": "⚔️"
+  ":bow:": "🏹"
+  ":shield:": "🛡️"
+  ":apple:": "🍎"
+  ":bread:": "🍞"
+  ":chest:": "📦"
+  ":book:": "📚"
+
+# Replacement order (optional - if not specified, all mappings are processed)
+replacement-order:
+  - ":heart:"
+  - ":star:"
+  - ":fire:"
+  - ":smile:"
+  - ":thumbsup:"
+
+# Advanced replacement settings
+word-boundary: false  # Use word boundaries for more precise replacement
+replace-in-commands: false  # Don't replace emojis in commands starting with /
+
+# Group-based emoji settings (requires LuckPerms or Vault)
+groups:
+  # Which groups can use emojis
+  vip: true
+  premium: true
+  staff: true
+  default: true
+
+# World-based emoji settings
+worlds:
+  # Which worlds allow emojis
+  spawn: true
+  survival: true
+  creative: true
+  pvp: false

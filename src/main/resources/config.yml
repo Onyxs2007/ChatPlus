@@ -1,0 +1,113 @@
+# ChatPlus Main Configuration
+# This file contains master switches, integrations, and default settings
+
+# General Settings
+general:
+  # Plugin prefix for messages
+  prefix: "&7[&6ChatPlus&7] "
+
+# Core Feature Toggles
+cooldown:
+  # Enable chat cooldown system
+  enabled: true
+
+emoji:
+  # Enable emoji replacement system
+  enabled: true
+
+filters:
+  # Enable basic chat filters (duplicate, caps, repeated chars)
+  enabled: true
+  
+  # Profanity/Blacklist Filter
+  blacklist:
+    # List of words to filter (case-insensitive, word boundaries applied)
+    words:
+      - "badword1"
+      - "badword2"
+      - "spam"
+      - "example"
+    
+    # Action to take: "block" (prevent message) or "replace" (replace with symbols)
+    action: "replace"
+    
+    # Replacement type: "asterisk", "hash", "dash", "custom", "partial"
+    # partial keeps first/last letter: "badword" -> "b*****d"
+    replacement-type: "asterisk"
+    
+    # Custom replacement character (used when replacement-type is "custom")
+    custom-replacement: "*"
+
+# Clickable Chat Actions
+# Players can type :trigger: to create clickable text
+# Click Actions: [ OPEN_URL,RUN_COMMAND ]
+clickable-actions:
+  discord:
+    display: "&9[Discord]"
+    hover: "&bClick to join our Discord server!"
+    click-action: "OPEN_URL"
+    click-value: "https://discord.gg/yourserver"
+  
+  website:
+    display: "&e[Website]"
+    hover: "&6Visit our website for more info!"
+    click-action: "OPEN_URL"
+    click-value: "https://yourserver.com"
+  
+  rules:
+    display: "&c[Rules]"
+    hover: "&cClick to view server rules"
+    click-action: "RUN_COMMAND"
+    click-value: "/rules"
+  
+  shop:
+    display: "&a[Store]"
+    hover: "&aClick to open the Store"
+    click-action: "RUN_COMMAND"
+    click-value: "/shop"
+
+# Async Chat Settings (Paper 1.19+)
+async-chat:
+  # Use Paper's async chat API when available
+  enabled: true
+  # Process messages on async thread for better performance
+  async-processing: true
+
+# Integration Settings
+integrations:
+  # PlaceholderAPI integration
+  placeholderapi:
+    enabled: true
+    # Load replacements before PlaceholderAPI parsing
+    load-before-papi: true
+    
+  # LuckPerms integration for group detection
+  luckperms:
+    enabled: true
+    
+  # Vault integration (fallback for group detection)
+  vault:
+    enabled: true
+    
+  # Respect other mute systems
+  respect-mutes:
+    # Check LuckPerms mutes
+    luckperms: true
+    # Check LiteBans mutes
+    litebans: true
+
+# Performance Settings
+performance:
+  # Cache size for regex operations (0 = no caching)
+  regex-cache-size: 100
+  # Cache timeout in minutes
+  cache-timeout: 30
+  # Use short-lived caches keyed by UUID
+  uuid-cache: true
+
+# Debug Settings
+debug:
+  # Enable debug logging
+  enabled: false
+  # Log all message processing
+  log-messages: false

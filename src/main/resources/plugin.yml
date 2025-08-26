@@ -1,0 +1,21 @@
+name: ChatPlus
+version: '1.21'
+main: com.chatplus.ChatPlusPlugin
+api-version: '1.21'
+author: Astro Studio
+description: Adds chat cooldown and emoji replacement features
+
+commands:
+  chatplus:
+    description: Main ChatPlus command
+    usage: /chatplus <reload>
+    permission: chatplus.admin
+    aliases: [cp]
+
+permissions:
+  chatplus.admin:
+    description: Access to ChatPlus admin commands
+    default: op
+  chatplus.bypass:
+    description: Bypass chat cooldown
+    default: op
