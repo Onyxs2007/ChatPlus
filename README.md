@@ -33,7 +33,6 @@ Hot-reloadable with /chatplus reload.
 # Optional Tools
 ```
 Player toggles (/chatplus toggle emojis).
-Group-specific join/leave messages.
 Slowmode command for staff.
 PlaceholderAPI integration.
 Toggle Chat 
